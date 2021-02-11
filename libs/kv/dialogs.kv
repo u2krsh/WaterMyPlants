@@ -1,0 +1,96 @@
+<KitchenSinkItemConfirm>
+    on_release: root.set_icon(check)
+
+    CheckboxLeftWidget:
+        id: check
+        group: "check"
+
+
+
+<KitchenSinkDialogsCustomContent>
+    orientation: "vertical"
+    spacing: "1dp"
+    size_hint_y: None
+    height: "120dp"
+
+    MDTextField:
+        hint_text: "City"
+
+    MDTextField:
+        hint_text: "Street"
+
+<KitchenSinkCards>
+    name: "cards"
+    Toolbar:
+        title: "MDCard"
+        pos_hint: {"top": 1}
+
+<KitchenSinkBanner@Screen>
+    name: "banner"
+
+    MDBanner:
+        id: banner
+        over_widget: scroll
+    MDToolbar:
+        id: toolbar
+        title: "Example Banners"
+        md_bg_color: app.theme_cls.primary_color
+        elevation: 10
+        left_action_items: [['dots-vertical', lambda x: None]]
+        pos_hint: {'top': 1}
+
+    ScrollView:
+        id: scroll
+        size_hint_y: None
+        height: Window.height - toolbar.height
+
+
+
+<KitchenSinkDialogs>
+    name: 'dialogs'
+    app: app
+
+    Toolbar:
+        id: toolbar
+        pos_hint: {"top": 1}
+
+
+
+    MDFillRoundFlatIconButton:
+        text: "Water Your Plant"
+        icon: "water"
+        pos_hint: {'center_x': .5, 'center_y': 0.25 }
+
+    MDRaisedButton:
+        text: "Refresh"
+        pos_hint: {'center_x': .5, 'center_y': .8}
+        on_release: root.show_example_alert_dialog()
+
+
+
+
+
+
+
+
+    MDCard:
+        orientation: "vertical"
+        padding: "8dp"
+        size_hint: None, None
+        size: "280dp", "180dp"
+        pos_hint: {"center_x": .5, "center_y": .5}
+
+        MDLabel:
+            text: "What is WaterMyPlant?"
+            theme_text_color: "Secondary"
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        MDSeparator:
+            height: "1dp"
+
+        MDLabel:
+            text: '''WaterMyPlant is your virtual gardener and friend. I will warn you when your plant is about to die, and become a life-saver. You will never come back home and see your plants dead. '''
+
+
+

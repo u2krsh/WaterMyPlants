@@ -1,0 +1,40 @@
+{
+  'Water': {
+      'kv_string': 'dialogs',
+      'Import': 'from libs.baseclass.dialogs import KitchenSinkDialogs',
+      'Factory': 'Factory.KitchenSinkBanner()',
+      'Factory': 'KitchenSinkDialogs()',
+      'name_screen': 'dialogs',
+      'source_code': 'Components-Dialog.md',
+      'object': 0,
+      'icon': 'cup-water'
+  },
+
+
+  #'Source code': {
+  #    'kv_string': 'source_code_viewer',
+  #    'Factory': 'Factory.CodeInputScreen()', 'KitchenSinkCards()'
+  #    'name_screen': 'code viewer',
+  #    'object': 0
+  #},
+
+  'Settings': {
+      'kv_string': 'pickers',
+      'Import': 'from libs.baseclass.pickers import KitchenSinkPickers',
+      'Factory': 'KitchenSinkPickers()',
+      'name_screen': 'pickers',
+      'source_code': 'Components-Date-Picker.md',
+      'object': 0,
+      'icon': 'settings-box'
+  },
+
+  'Exit': {
+      'kv_string': 'exit',
+      'Import': 'from libs.baseclass.exit import Exit',
+      'Factory': 'exit()',
+      'name_screen': 'Tata ByeBye',
+      'object': 0,
+      'icon': 'exit-run'
+  }
+
+}

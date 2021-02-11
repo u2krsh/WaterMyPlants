@@ -1,0 +1,67 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+<Buttons@Screen>
+    name: 'buttons'
+
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "10dp"
+
+        Toolbar:
+            id: toolbar
+
+        ScrollView:
+            size_hint_x: None
+            width: box.width
+            # pos_hint: {'center_x': .5}
+            width: self.parent.width
+            bar_width: 0
+
+            MDGridLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                cols: 3
+
+                Widget:
+
+                MDBoxLayout:
+                    id: box
+                    padding: dp(10)
+                    adaptive_size: True
+                    spacing: dp(10)
+                    orientation: 'vertical'
+                    pos_hint: {'center_x': .5}
+
+
+
+
+                    MDFillRoundFlatIconButton:
+                        text: "Water Your Plant"
+                        icon: "water"
+                        pos_hint: {'center_x': .5}
+
+
+
+                        MDSeparator:
+
+
+
+
+
+                        MDSeparator:
+                    MDFillRoundFlatIconButton:
+                        text: "Refresh Data"
+                        icon: "water"
+                        pos_hint: {'center_x': .5}
+
+                    MDRaisedButton:
+                        text: "ALERT"
+                        pos_hint: {'center_x': .5, 'center_y': .8}
+                        on_release: root.show_example_alert_dialog()
+
+
+                        MDSeparator:
+
+
+
+                Widget:
